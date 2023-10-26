@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: sans-serif;
+
+}
+
+header{
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)) , url('img.jpg') ;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+/*nav{
+   
+    height: 80px;
+    width: 100%;
+}*/
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    margin-left: -1%;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+label.logo:hover{
+    color: red;
+}
+
+nav ul{
+    float: right;
+    margin-right: 26%;
+    margin-top: -6%;
+    z-index: 1;
+ 
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+
+nav ul li a{
+text-decoration: none;
+color: white;
+padding: 10px 20px;
+font-size: 20px;
+position: relative;
+}
+
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid indianred; 
+    transition: 0.4s linear;
+}
+
+nav ul li a.active,a:hover::before{
+    width: 100%;
+    border-bottom: 2px solid indianred;
+}
+
+.sidebar{
+    font-size: 30px;
+    color: white;
+    float: left;
+    line-height: 80px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+    position: relative ;
+    
+}
+
+#check{
+    display:none;
+}
+
+.register a{
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    left: 76%;
+    top: -43px;
+    color: white;
+    background: indianred ;
+    margin-right: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+.register a :hover{
+    background: transparent;
+    border: 1px solid indianred;
+   
+}
+ 
+@media(max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 10px;
+    }
+     nav ul li a{
+    font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 858px){
+
+    .sidebar{
+        display: block;
+        padding-left: 7px;
+    }
+
+    ul{
+        position: fixed;
+        width: 50%;
+        height: 80vh;
+        background: #022036;
+        top: 100px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+     
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+
+
+.h-txt{
+    max-width: 650px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white; 
+}
+
+.h-txt span{
+    font-size: 25px;
+    letter-spacing: 5px;
+    line-height: 40px;
+}
+
+.h-txt h1{
+    font-size: 3.5em;
+}
+
+.h-txt a{
+    text-decoration: none;
+    background: indianred;
+    color: white;
+    padding: 10px 20px;
+    letter-spacing: 5px;
+    transition: 0.4s;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.h-txt a:hover{
+    background: transparent;
+    border: 1px solid indianred;
+}
+
+footer{
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+footer{
+    height: 18vh;
+    bottom: auto;
+
+}
+
+footer h2{
+    position: relative;
+    
+}
+
+footer a i{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 10px 9px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;   
+
+}
+
+footer a i:hover{
+    color: indianred;
+}
